@@ -5,6 +5,10 @@ pipeline {
         TRIVY_SCAN_TARGET = "${env.WORKSPACE}/debian.tar"
     }
 
+    triggers {
+        cron '30 00 * * 1-5' // Runs at 00:30 on every day-of-week from Monday through Friday
+    }
+
     stages {
         stage('Trivy Image Scan') {
             steps {
