@@ -6,7 +6,7 @@ pipeline {
     }
 
     triggers {
-        cron '30 00 * * 1-5' // Runs at 00:30 on every day-of-week from Monday through Friday
+        cron '00 22 * * 1-5' // Runs at 22:00 on every day-of-week from Monday through Friday
     }
 
     stages {
